@@ -37,7 +37,9 @@ class ApiStateView extends StatelessWidget {
               children: [
                 Text(error!, textAlign: TextAlign.center),
                 const SizedBox(height: 12),
-                if (onRetry != null) ElevatedButton(onPressed: onRetry, child: const Text("Retry")),
+                if (onRetry != null)
+                  ElevatedButton(
+                      onPressed: onRetry, child: const Text("Retry")),
               ],
             ),
           );

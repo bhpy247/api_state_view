@@ -68,13 +68,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("api_state_view Example"), centerTitle: true),
+      appBar: AppBar(
+          title: const Text("api_state_view Example"), centerTitle: true),
       body: Column(
         children: [
           Expanded(
             child: ApiStateView(
               isLoading: state == ViewState.loading,
-              error: state == ViewState.error ? "Something went wrong.\nPlease try again." : null,
+              error: state == ViewState.error
+                  ? "Something went wrong.\nPlease try again."
+                  : null,
               isEmpty: state == ViewState.empty,
               onRetry: _retry,
               child: ListView.separated(
@@ -90,22 +93,27 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: Colors.grey.shade100,
-              boxShadow: const [BoxShadow(blurRadius: 4, color: Colors.black12)],
+              boxShadow: const [
+                BoxShadow(blurRadius: 4, color: Colors.black12)
+              ],
             ),
             child: Wrap(
               spacing: 10,
               runSpacing: 10,
               alignment: WrapAlignment.center,
               children: [
-                ElevatedButton(onPressed: _loadSuccess, child: const Text("Loading")),
-                ElevatedButton(onPressed: _showEmpty, child: const Text("Empty")),
-                ElevatedButton(onPressed: _showError, child: const Text("Error")),
-                ElevatedButton(onPressed: _loadSuccess, child: const Text("Success")),
+                ElevatedButton(
+                    onPressed: _loadSuccess, child: const Text("Loading")),
+                ElevatedButton(
+                    onPressed: _showEmpty, child: const Text("Empty")),
+                ElevatedButton(
+                    onPressed: _showError, child: const Text("Error")),
+                ElevatedButton(
+                    onPressed: _loadSuccess, child: const Text("Success")),
               ],
             ),
           ),
