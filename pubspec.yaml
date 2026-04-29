@@ -1,6 +1,6 @@
 name: api_state_view
 description: A simple and reusable Flutter widget for handling loading, error, empty and success API states.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/bhpy247/api_state_view
 repository: https://github.com/bhpy247/api_state_view
 issue_tracker: https://github.com/bhpy247/api_state_view/issues
